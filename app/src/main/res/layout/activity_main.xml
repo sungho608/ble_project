@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BFBDB8"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginStart="436dp"
+        android:layout_marginLeft="436dp"
+        android:background="@drawable/view_dlcs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.67">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/view_bcl"
+            android:layout_gravity="bottom|center_horizontal">
+
+            <Button
+                android:id="@+id/btn_bright_down"
+                android:layout_width="59dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_brightness"
+                android:text="-"
+                android:textSize="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_bright_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="44dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/btn_bright_down"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_bright_up"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_brightness"
+                android:text="+"
+                android:textSize="30dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_bright_num"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbar_brightness"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="30dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_brightness"
+                android:thumb="@drawable/brightness_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_four"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_5300"
+                android:text="5300K"
+                android:paddingBottom="10dp"
+                android:gravity="bottom|center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/btn_three"
+                app:layout_constraintTop_toBottomOf="@+id/btn_two" />
+
+            <Button
+                android:id="@+id/btn_three"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/btn_4800"
+                android:text="4800K"
+                android:paddingBottom="10dp"
+                android:gravity="bottom|center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_one" />
+
+            <Button
+                android:id="@+id/btn_two"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_4300"
+                android:text="4300K"
+                android:paddingBottom="10dp"
+                android:gravity="bottom|center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/btn_one"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_one"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/btn_3500"
+                android:text="3500K"
+                android:paddingBottom="10dp"
+                android:gravity="bottom|center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/frame2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.3" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/btn_light1"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|left"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_select_light"
+                android:drawableLeft="@drawable/btn_image_sample"
+                android:text="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_light2"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/btn_select_light"
+                android:drawableLeft="@drawable/btn_image_sample"
+                android:text="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="11">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view_all"
+                    android:layout_width="296dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/view_dlcs"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/and"
+                    app:layout_constraintStart_toStartOf="@+id/view_all"
+                    app:layout_constraintTop_toTopOf="@+id/view_all" />
+
+                <TextView
+                    android:id="@+id/tv_alloff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="All Off"
+                    android:textColor="#B1BCBE"
+                    android:textSize="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_all"
+                    app:layout_constraintStart_toStartOf="@+id/view_all" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/and"
+                    app:layout_constraintStart_toEndOf="@+id/imageView1"
+                    app:layout_constraintTop_toTopOf="@+id/view_all" />
+                <TextView
+                    android:id="@+id/tv_allecho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="All Echo"
+                    android:textColor="#B1BCBE"
+                    android:textSize="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_all"
+                    app:layout_constraintStart_toEndOf="@+id/tv_alloff" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/and"
+                    app:layout_constraintEnd_toEndOf="@+id/view_all"
+                    app:layout_constraintTop_toTopOf="@+id/view_all" />
+                <TextView
+                    android:id="@+id/tv_allon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="All On"
+                    android:textColor="#B1BCBE"
+                    android:textSize="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_all"
+                    app:layout_constraintEnd_toEndOf="@+id/view_all" />
+
+
+                <View
+                    android:id="@+id/view_depth"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/view_dlcs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_all" />
+
+                <ImageView
+                    android:id="@+id/iv_depth"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_depth"
+                    app:layout_constraintStart_toStartOf="@+id/view_depth"
+                    app:layout_constraintTop_toTopOf="@+id/view_depth"
+                    app:srcCompat="@drawable/and" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Depth"
+                    android:textColor="#AEA5A5"
+                    app:layout_constraintEnd_toEndOf="@+id/view_depth"
+                    app:layout_constraintStart_toStartOf="@+id/view_depth"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_depth" />
+
+
+                <Switch
+                    android:id="@+id/toggle_depth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_depth"
+                    app:layout_constraintEnd_toEndOf="@+id/view_depth"
+                    app:layout_constraintStart_toStartOf="@+id/view_depth" />
+
+                <View
+                    android:id="@+id/view_lightning"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="43dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/view_dlcs"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_all" />
+
+                <ImageView
+                    android:id="@+id/iv_lightning"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_lightning"
+                    app:layout_constraintStart_toStartOf="@+id/view_lightning"
+                    app:layout_constraintTop_toTopOf="@+id/view_lightning"
+                    app:srcCompat="@drawable/and" />
+
+                <TextView
+                    android:id="@+id/tv_lightning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Lightning"
+                    android:textColor="#AEA5A5"
+                    app:layout_constraintEnd_toEndOf="@+id/view_lightning"
+                    app:layout_constraintStart_toStartOf="@+id/view_lightning"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_lightning" />
+
+
+                <Switch
+                    android:id="@+id/toggle_lightning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_lightning"
+                    app:layout_constraintEnd_toEndOf="@+id/view_lightning"
+                    app:layout_constraintStart_toStartOf="@+id/view_lightning" />
+
+                <View
+                    android:id="@+id/view_camera"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/view_dlcs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_depth" />
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_camera"
+                    app:layout_constraintStart_toStartOf="@+id/view_camera"
+                    app:layout_constraintTop_toTopOf="@+id/view_camera"
+                    app:srcCompat="@drawable/and" />
+
+                <TextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Camera"
+                    android:textColor="#AEA5A5"
+                    app:layout_constraintEnd_toEndOf="@+id/view_camera"
+                    app:layout_constraintStart_toStartOf="@+id/view_camera"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_camera" />
+
+
+                <Switch
+                    android:id="@+id/toggle_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginBottom="10dp"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_camera"
+                    app:layout_constraintStart_toStartOf="@+id/view_camera" />
+
+                <View
+                    android:id="@+id/view_sync"
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="43dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/view_dlcs"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_lightning" />
+
+                <ImageView
+                    android:id="@+id/iv_sync"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view_sync"
+                    app:layout_constraintStart_toStartOf="@+id/view_sync"
+                    app:layout_constraintTop_toTopOf="@+id/view_sync"
+                    app:srcCompat="@drawable/and" />
+
+                <TextView
+                    android:id="@+id/tv_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Sync"
+                    android:textColor="#AEA5A5"
+                    app:layout_constraintEnd_toEndOf="@+id/view_sync"
+                    app:layout_constraintStart_toStartOf="@+id/view_sync"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_sync" />
+
+
+                <Switch
+                    android:id="@+id/toggle_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_selector"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_sync"
+                    app:layout_constraintEnd_toEndOf="@+id/view_sync"
+                    app:layout_constraintStart_toEndOf="@+id/view_camera" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="184dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_power_rounded"
+                    android:elevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/btn_power"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:text="POWER ON"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="바이오사이언스"
+                    android:textColor="#878282"
+                    android:textSize="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
