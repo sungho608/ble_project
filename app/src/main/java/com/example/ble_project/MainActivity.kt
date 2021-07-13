@@ -3,8 +3,8 @@ package com.example.ble_project
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.provider.CalendarContract
 import android.view.View
+import android.view.WindowManager
 import android.widget.SeekBar
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
