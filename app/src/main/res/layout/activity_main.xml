@@ -135,8 +135,45 @@
                 android:text="3500K"
                 app:layout_constraintStart_toEndOf="@+id/btn_bright_up"
                 app:layout_constraintTop_toTopOf="parent" />
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_two"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <ImageButton
+                    android:id="@+id/ImageView03"
+                    android:layout_width="224dp"
+                    android:layout_height="224dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_field_3" />
 
+                <ImageButton
+                    android:id="@+id/ImageView02"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="yello"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_field_2_2_active" />
+
+                <ImageButton
+                    android:id="@+id/ImageView01"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="yello"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_field_1" />
+            </FrameLayout>
+>>>>>>> cdd962c41a25eeb7774a75c82725574f32aa2c28
 
 
 
