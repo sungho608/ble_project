@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.CompoundButton
 import android.widget.SeekBar
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -30,17 +29,35 @@ class MainActivity : AppCompatActivity() {
 
         setFrag(0)
 
+        binding.seekbarBrightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                brightNum = progress + 1
+                binding.tvBrightnum.text = brightNum.toString()
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+        })
+
         binding.btnBrightUp.setOnClickListener(View.OnClickListener {
             if(brightNum < 5){
                 brightNum++
-                binding.tvBrightnum.setText(brightNum.toString() + "")
+                binding.seekbarBrightness.progress = brightNum-1
+                binding.tvBrightnum.text = brightNum.toString()
             }
         })
 
         binding.btnBrightDown.setOnClickListener(View.OnClickListener {
             if(brightNum > 1){
                 brightNum--
-                binding.tvBrightnum.setText(brightNum.toString() + "")
+                binding.seekbarBrightness.progress = brightNum-1
+                binding.tvBrightnum.text = brightNum.toString()
             }
         })
 
