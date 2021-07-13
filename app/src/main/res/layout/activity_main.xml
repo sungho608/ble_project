@@ -18,13 +18,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageButton
+            android:id="@+id/ib_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_btn_setting"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="44dp"/>
 
         <ImageView
             android:layout_marginLeft="262dp"
             android:layout_width="305.2dp"
             android:layout_height="198.8dp"
-
             android:src="@drawable/gp_product"/>
+
         <ImageView
             android:layout_marginLeft="314dp"
             android:layout_marginTop="91dp"
