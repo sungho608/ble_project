@@ -126,6 +126,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_depth"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -142,7 +145,7 @@
         android:layout_height="150dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/view_dlcs"
         app:layout_constraintStart_toEndOf="@+id/view_depth"
         app:layout_constraintTop_toBottomOf="@+id/view_all" />
@@ -170,6 +173,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_lightning"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -214,6 +220,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_camera"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -258,6 +267,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_sync"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
