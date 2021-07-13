@@ -56,6 +56,38 @@ class LightFirst : Fragment(){
             }
         })
 
+        binding.viewAlloff.setOnClickListener {
+            binding.viewAlloff.isSelected = binding.viewAlloff.isSelected != true
+            if(binding.viewAlloff.isSelected == true){
+                binding.ivAlloff.setColorFilter(Color.parseColor("#5A67E7"))
+                binding.tvOff.setTextColor(Color.parseColor("#5A67E7"))
+            }else{
+                binding.ivAlloff.setColorFilter(Color.parseColor("#E0E0E0"))
+                binding.tvOff.setTextColor(Color.parseColor("#E0E0E0"))
+            }
+        }
+        binding.viewAllendo.setOnClickListener {
+            binding.viewAllendo.isSelected = binding.viewAllendo.isSelected != true
+            if(binding.viewAllendo.isSelected == true){
+                binding.ivAllendo.setColorFilter(Color.parseColor("#5A67E7"))
+                binding.tvAllendo.setTextColor(Color.parseColor("#5A67E7"))
+            }else{
+                binding.ivAllendo.setColorFilter(Color.parseColor("#E0E0E0"))
+                binding.tvAllendo.setTextColor(Color.parseColor("#E0E0E0"))
+            }
+        }
+        binding.viewAllon.setOnClickListener {
+            binding.viewAllon.isSelected = binding.viewAllon.isSelected != true
+            if(binding.viewAllon.isSelected == true){
+                binding.ivAllon.setColorFilter(Color.parseColor("#5A67E7"))
+                binding.tvAllon.setTextColor(Color.parseColor("#5A67E7"))
+            }else{
+                binding.ivAllon.setColorFilter(Color.parseColor("#E0E0E0"))
+                binding.tvAllon.setTextColor(Color.parseColor("#E0E0E0"))
+            }
+        }
+
+
         return binding.root
     }
 

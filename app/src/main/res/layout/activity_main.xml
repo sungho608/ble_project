@@ -18,12 +18,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_btn_setting"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="44dp"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="828dp"
             android:layout_height="290dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="26dp"
             android:background="@drawable/view_bcl">
+
 
             <ImageButton
                 android:id="@+id/btn_bright_down"
@@ -67,36 +76,34 @@
 
             <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/seekbar_brightness"
-                android:layout_marginLeft="36dp"
                 android:layout_width="221dp"
                 android:layout_height="30dp"
                 android:layout_gravity="bottom|center_horizontal"
-
-                android:layout_marginStart="20dp"
-
-                android:layout_marginBottom="30dp"
-
+                android:layout_marginLeft="36dp"
+                android:layout_marginBottom="87.2dp"
+                android:layout_marginTop="53.2dp"
                 android:progress="0"
-                android:progressDrawable="@drawable/seekbar_brightness"
+                android:progressDrawable="@drawable/ic_bg_brightness"
                 android:splitTrack="false"
                 android:thumb="@drawable/seekbar_thumb"
                 android:thumbOffset="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brightnum" />
 
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="17dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/seekbar_brightness"
                 tools:text="Brightness" />
-
 
             <Button
                 android:id="@+id/btn_four"
@@ -117,15 +124,14 @@
                 android:id="@+id/btn_three"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="313dp"
-                android:layout_marginLeft="313dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginLeft="56dp"
                 android:background="@drawable/btn_4800"
                 android:gravity="bottom|center_horizontal"
                 android:paddingBottom="10dp"
-                android:text="4800K"
                 android:stateListAnimator="@null"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text="4800K"
+                app:layout_constraintStart_toEndOf="@+id/seekbar_brightness"
                 app:layout_constraintTop_toBottomOf="@+id/btn_one" />
 
             <Button
@@ -164,13 +170,13 @@
                 android:layout_width="122dp"
                 android:layout_height="17dp"
                 android:layout_marginRight="172dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/btn_four"
                 tools:text="Color Temperature" />
 
 
@@ -220,14 +226,13 @@
                 android:layout_width="67dp"
                 android:layout_height="17dp"
                 android:layout_marginRight="114dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
                 tools:text="Light Field" />
 
 
@@ -296,12 +301,9 @@
         <FrameLayout
             android:id="@+id/main_frame"
             android:layout_width="match_parent"
+            android:layout_height="684dp"
+            android:layout_marginTop="12dp"/>
 
-            android:layout_height="684dp">
-
-
-
-        </FrameLayout>
 
 
     </LinearLayout>

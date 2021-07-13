@@ -88,41 +88,6 @@ class MainActivity : AppCompatActivity() {
             binding.btnLight1.setTextColor(Color.parseColor("#cccccc"))
         }
 
-<<<<<<< HEAD
-        binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.toggleDepth.setTextColor(Color.parseColor("#ff8933"))
-                binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-
-                binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvDepth.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-
-        binding.toggleLightning.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivLightning.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvLightning.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivLightning.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvLightning.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-
-        binding.toggleCamera.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivCamera.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvCamera.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivCamera.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvCamera.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-=======
->>>>>>> 113b8f030538edc30361c00568645be4e608433a
-
 
         setSeekBarMax(binding.seekbarBrightness,max)
 
