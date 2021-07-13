@@ -18,12 +18,22 @@ class LightFirst : Fragment(){
 
         binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+<<<<<<< HEAD
                 binding.toggleDepth.setSwitchTextAppearance(activity, R.style.SwitchTextAppearance)
 
                 binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
             } else {
                 binding.toggleDepth.setSwitchTextAppearance(activity, R.style.SwitchTextAppearance2)
+=======
+                binding.depthOn.visibility = View.VISIBLE
+                binding.depthOff.visibility = View.INVISIBLE
+                binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
+                binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
+            } else {
+                binding.depthOn.visibility = View.INVISIBLE
+                binding.depthOff.visibility = View.VISIBLE
+>>>>>>> 37c5e07c2459eabff31790c57462269bd3a93f1a
                 binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvDepth.setTextColor(Color.parseColor("#cccccc"))
             }
