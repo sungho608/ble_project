@@ -126,7 +126,7 @@
 
 
     <Switch
-        android:textColor="#aaaaaa"
+
         android:id="@+id/toggle_depth"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -199,6 +199,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_lightning"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -243,6 +246,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_camera"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -287,6 +293,9 @@
 
 
     <Switch
+        android:showText="true"
+        android:textOn="ON"
+        android:textOff="OFF"
         android:id="@+id/toggle_sync"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
