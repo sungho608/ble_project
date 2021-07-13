@@ -2,6 +2,7 @@ package com.example.ble_project
 
 import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.view.View
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
@@ -59,9 +60,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
             if(buttonView.isChecked == true){
+                binding.toggleDepth.setTextColor(Color.parseColor("#ff8933"))
                 binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
             } else {
+
                 binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvDepth.setTextColor(Color.parseColor("#cccccc"))
             }
@@ -112,6 +115,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnFour.setOnClickListener {
             onButtonClick(3)
         }
+
 
     }
 

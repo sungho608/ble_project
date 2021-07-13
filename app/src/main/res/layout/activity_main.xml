@@ -63,22 +63,24 @@
                 app:layout_constraintStart_toEndOf="@+id/tv_brightnum"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/seekbar_brightness"
+                android:layout_marginLeft="36dp"
                 android:layout_width="221dp"
                 android:layout_height="30dp"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="30dp"
-                android:thumbOffset="1dp"
                 android:progress="0"
-                android:splitTrack="false"
                 android:progressDrawable="@drawable/seekbar_brightness"
+                android:splitTrack="false"
                 android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
+                app:layout_constraintEnd_toStartOf="@+id/btn_three"
+                app:layout_constraintHorizontal_bias="0.282"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_bright_up"
+                app:layout_constraintVertical_bias="0.264" />
 
             <Button
                 android:id="@+id/btn_four"
@@ -135,13 +137,14 @@
                 android:text="3500K"
                 app:layout_constraintStart_toEndOf="@+id/btn_bright_up"
                 app:layout_constraintTop_toTopOf="parent" />
-            
+
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btn_two"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
@@ -173,7 +176,6 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/btn_field_1" />
             </FrameLayout>
->>>>>>> cdd962c41a25eeb7774a75c82725574f32aa2c28
 
 
 
@@ -339,7 +341,7 @@
                     android:layout_height="150dp"
                     android:layout_marginStart="40dp"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="68dp"
                     android:background="@drawable/view_dlcs"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/view_all" />
@@ -371,6 +373,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_marginTop="24dp"
+                    android:checked="false"
+                    android:fontFamily="sans-serif"
+                    android:showText="true"
+                    android:textColor="#c9c9c9"
+                    android:textOff="Off"
+                    android:textOn="ON"
+                    android:textSize="2.8dp"
+                    android:textStyle="bold"
                     android:thumb="@drawable/switch_thumb"
                     android:track="@drawable/switch_selector"
                     app:layout_constraintEnd_toEndOf="@+id/view_depth"
@@ -412,6 +422,13 @@
 
 
                 <Switch
+                    android:fontFamily="sans-serif"
+                    android:textSize="2.8dp"
+                    android:textColor="#c9c9c9"
+                    android:textStyle="bold"
+                    android:textOn="On"
+                    android:textOff="Off"
+                    android:showText="true"
                     android:id="@+id/toggle_lightning"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
@@ -424,6 +441,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_lightning" />
 
                 <View
+                    android:textOn="On"
+                    android:textOff="Off"
+                    android:showText="true"
                     android:id="@+id/view_camera"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -457,6 +477,13 @@
 
 
                 <Switch
+                    android:fontFamily="sans-serif"
+                    android:textSize="2.8dp"
+                    android:textColor="#c9c9c9"
+                    android:textStyle="bold"
+                    android:textOn="On"
+                    android:textOff="Off"
+                    android:showText="true"
                     android:id="@+id/toggle_camera"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
@@ -501,6 +528,13 @@
 
 
                 <Switch
+                    android:fontFamily="sans-serif"
+                    android:textSize="2.8dp"
+                    android:textColor="#c9c9c9"
+                    android:textStyle="bold"
+                    android:textOn="On"
+                    android:textOff="Off"
+                    android:showText="true"
                     android:id="@+id/toggle_sync"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
