@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_all" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_off"
         android:layout_width="34dp"
         android:layout_height="14dp"
         android:layout_marginStart="39dp"
@@ -41,7 +41,7 @@
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@+id/view_all"
         app:layout_constraintTop_toBottomOf="@+id/imageView1"
-        tools:text="All Off" />
+        android:text="All Off" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -64,7 +64,7 @@
         android:text="All Echo"
         android:textColor="#afafaf"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/tv_off"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
@@ -114,7 +114,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_depth" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_depth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -134,7 +134,7 @@
         android:track="@drawable/switch_selector"
         app:layout_constraintEnd_toEndOf="@+id/view_depth"
         app:layout_constraintStart_toStartOf="@+id/view_depth"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_depth" />
 
     <View
         android:id="@+id/view_lightning"
@@ -177,7 +177,6 @@
         android:thumb="@drawable/switch_thumb"
         android:track="@drawable/switch_selector"
         app:layout_constraintEnd_toEndOf="@+id/view_lightning"
-        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/view_lightning"
         app:layout_constraintTop_toBottomOf="@+id/tv_lightning" />
 
@@ -266,7 +265,7 @@
         android:thumb="@drawable/switch_thumb"
         android:track="@drawable/switch_selector"
         app:layout_constraintEnd_toEndOf="@+id/view_sync"
-        app:layout_constraintStart_toEndOf="@+id/view_camera"
+        app:layout_constraintStart_toStartOf="@+id/view_sync"
         app:layout_constraintTop_toBottomOf="@+id/tv_sync" />
 
     <Button
