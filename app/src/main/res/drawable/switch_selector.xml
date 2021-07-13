@@ -8,8 +8,8 @@
                 android:radius="5dp" />
 
             <size
-                android:width="80dp"
-                android:height="25dp" />
+                android:width="82dp"
+                android:height="22dp" />
 
             <solid
                 android:color="#ff7f00" />
@@ -24,8 +24,8 @@
                 android:radius="5dp" />
 
             <size
-                android:width="80dp"
-                android:height="25dp" />
+                android:width="82dp"
+                android:height="22dp" />
 
             <solid
                 android:color="#9b9b9b" />
