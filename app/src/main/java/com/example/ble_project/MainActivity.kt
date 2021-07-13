@@ -3,10 +3,8 @@ package com.example.ble_project
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.SeekBar
-import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatSeekBar
@@ -90,7 +88,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
         setSeekBarMax(binding.seekbarBrightness,max)
+
 
 
         binding.btnOne.setOnClickListener {

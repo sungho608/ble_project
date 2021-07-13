@@ -7,9 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="btn_3500k">#FF8200</color>
-    <color name="btn_4300k">#FFC800</color>
-    <color name="btn_4800k">#FAEB78</color>
-    <color name="btn_5300k">#FAFAD2</color>
+    <color name="btn_3500k">#FFB800</color>
+    <color name="btn_4300k">#FFCB44</color>
+    <color name="btn_4800k">#FFE5A0</color>
+    <color name="btn_5300k">#FFFFFF</color>
     <color name="btn_border">#E0E0E0</color>
+    <color name="yellow">#FFCB44</color>
 </resources>
