@@ -126,13 +126,7 @@
 
 
     <Switch
-<<<<<<< HEAD
-        android:showText="true"
-        android:textOn="ON"
-        android:textOff="OFF"
-=======
-        android:textColor="#aaaaaa"
->>>>>>> 37c5e07c2459eabff31790c57462269bd3a93f1a
+
         android:id="@+id/toggle_depth"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
