@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     val max : Int = 5
     val min : Int = 1
     val step : Int = 1
-    private var brightNum: Int = 0
+    private var brightNum: Int = 1
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
         setFrag(0)
 
         binding.btnBrightUp.setOnClickListener(View.OnClickListener {
-            if(brightNum < 4){
+            if(brightNum < 5){
                 brightNum++
                 binding.tvBrightnum.setText(brightNum.toString() + "")
             }
         })
 
         binding.btnBrightDown.setOnClickListener(View.OnClickListener {
-            if(brightNum > 0){
+            if(brightNum > 1){
                 brightNum--
                 binding.tvBrightnum.setText(brightNum.toString() + "")
             }
@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
 
 
         setSeekBarMax(binding.seekbarBrightness,max)
+        binding.seekbarBrightness.setOnSeekBarChangeListener()
 
 
         binding.btnOne.setOnClickListener {

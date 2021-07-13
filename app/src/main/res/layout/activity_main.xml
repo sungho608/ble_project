@@ -45,7 +45,7 @@
                 android:layout_marginTop="82dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
-                android:text="0"
+                android:text="1"
                 android:textColor="#4c4c61"
                 android:textSize="32sp"
                 android:textStyle="normal"
@@ -244,6 +244,7 @@
 
 
         <FrameLayout
+            android:id="@+id/main_frame"
             android:layout_width="match_parent"
             android:layout_height="696dp">
 
