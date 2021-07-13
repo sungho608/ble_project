@@ -1,12 +1,13 @@
 package com.example.ble_project
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.CompoundButton
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatSeekBar
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentTransaction
 import com.example.ble_project.databinding.ActivityMainBinding
 
@@ -20,10 +21,13 @@ class MainActivity : AppCompatActivity() {
     val step : Int = 1
     private var brightNum: Int = 0
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setFrag(0)
 
         binding.btnBrightUp.setOnClickListener(View.OnClickListener {
             if(brightNum < 4){
@@ -40,62 +44,31 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.btnLight1.setOnClickListener {
+            setFrag(0)
             binding.btnLight1.setBackgroundResource(R.drawable.btn_select_light)
+            var drawable1 = resources.getDrawable(R.drawable.ic_gp_product_pressed,theme)
+            binding.btnLight1.setCompoundDrawablesWithIntrinsicBounds(drawable1,null,null,null)
             binding.btnLight1.setTextColor(Color.parseColor("#ffffff"))
 
             binding.btnLight2.setBackgroundResource(R.drawable.btn_not_selected_light)
+            var drawable2 = resources.getDrawable(R.drawable.ic_gp_product,theme)
+            binding.btnLight2.setCompoundDrawablesWithIntrinsicBounds(drawable2,null,null,null)
             binding.btnLight2.setTextColor(Color.parseColor("#cccccc"))
-            setFrag(1)
         }
 
         binding.btnLight2.setOnClickListener {
+            setFrag(1)
             binding.btnLight2.setBackgroundResource(R.drawable.btn_select_light)
+            var drawable1 = resources.getDrawable(R.drawable.ic_gp_product_pressed, theme)
+            binding.btnLight2.setCompoundDrawablesWithIntrinsicBounds(drawable1, null, null, null)
             binding.btnLight2.setTextColor(Color.parseColor("#ffffff"))
 
             binding.btnLight1.setBackgroundResource(R.drawable.btn_not_selected_light)
+            var drawable2 = resources.getDrawable(R.drawable.ic_gp_product, theme)
+            binding.btnLight1.setCompoundDrawablesWithIntrinsicBounds(drawable2, null, null, null)
             binding.btnLight1.setTextColor(Color.parseColor("#cccccc"))
-            setFrag(2)
         }
 
-        binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvDepth.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-
-        binding.toggleLightning.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivLightning.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvLightning.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivLightning.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvLightning.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-
-        binding.toggleCamera.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivCamera.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvCamera.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivCamera.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvCamera.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
-
-        binding.toggleSync.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            if(buttonView.isChecked == true){
-                binding.ivSync.setColorFilter(Color.parseColor("#0066ff"))
-                binding.tvSync.setTextColor(Color.parseColor("#0066ff"))
-            } else {
-                binding.ivSync.setColorFilter(Color.parseColor("#cccccc"))
-                binding.tvSync.setTextColor(Color.parseColor("#cccccc"))
-            }
-        })
 
 
         setSeekBarMax(binding.seekbarBrightness,max)
@@ -119,8 +92,8 @@ class MainActivity : AppCompatActivity() {
     private fun setFrag(fragNum : Int){
         val ft : FragmentTransaction = supportFragmentManager.beginTransaction()
         when(fragNum){
-            0->{ft.replace(R.id.frame1,LightFirst()).commit()}
-            1->{ft.replace(R.id.frame2,LightSecond()).commit()}
+            0->{ft.replace(R.id.main_frame,LightFirst()).commit()}
+            1->{ft.replace(R.id.main_frame,LightSecond()).commit()}
         }
     }
 
