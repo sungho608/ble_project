@@ -18,18 +18,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageButton
+            android:id="@+id/ib_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_btn_setting"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="44dp"/>
+
         <ImageView
             android:layout_marginLeft="262dp"
             android:layout_width="305.2dp"
             android:layout_height="198.8dp"
-
             android:src="@drawable/gp_product"/>
+
         <ImageView
             android:layout_marginLeft="314dp"
             android:layout_marginTop="91dp"
             android:layout_width="251.2dp"
             android:layout_height="605.2dp"
-
             android:src="@drawable/ic_gp_light"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,6 +46,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="26dp"
             android:background="@drawable/view_bcl">
+
 
             <ImageButton
                 android:id="@+id/btn_bright_down"
@@ -88,26 +97,27 @@
                 android:layout_marginLeft="36dp"
                 android:layout_marginBottom="30dp"
                 android:progress="0"
-                android:progressDrawable="@drawable/seekbar_brightness"
+                android:progressDrawable="@drawable/ic_bg_brightness"
                 android:splitTrack="false"
                 android:thumb="@drawable/seekbar_thumb"
                 android:thumbOffset="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brightnum" />
 
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="17dp"
+                android:layout_marginLeft="114dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/seekbar_brightness"
                 tools:text="Brightness" />
-
 
             <Button
                 android:id="@+id/btn_four"
@@ -175,13 +185,13 @@
                 android:layout_width="122dp"
                 android:layout_height="17dp"
                 android:layout_marginRight="172dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/btn_four"
                 tools:text="Color Temperature" />
 
 
@@ -231,14 +241,13 @@
                 android:layout_width="67dp"
                 android:layout_height="17dp"
                 android:layout_marginRight="114dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
                 tools:text="Light Field" />
 
 
@@ -306,6 +315,7 @@
             tools:layout_editor_absoluteX="-16dp">
 
         </FrameLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

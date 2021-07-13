@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
             binding.btnLight1.setTextColor(Color.parseColor("#cccccc"))
         }
 
+
         setSeekBarMax(binding.seekbarBrightness,max)
 
 
