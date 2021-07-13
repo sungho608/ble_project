@@ -3,8 +3,10 @@ package com.example.ble_project
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.CompoundButton
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatSeekBar
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     val max : Int = 5
     val min : Int = 1
     val step : Int = 1
-    private var brightNum: Int = 0
+    private var brightNum: Int = 1
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,17 +31,35 @@ class MainActivity : AppCompatActivity() {
 
         setFrag(0)
 
+        binding.seekbarBrightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                brightNum = progress + 1
+                binding.tvBrightnum.text = brightNum.toString()
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+        })
+
         binding.btnBrightUp.setOnClickListener(View.OnClickListener {
             if(brightNum < 5){
                 brightNum++
-                binding.tvBrightnum.setText(brightNum.toString() + "")
+                binding.seekbarBrightness.progress = brightNum-1
+                binding.tvBrightnum.text = brightNum.toString()
             }
         })
 
         binding.btnBrightDown.setOnClickListener(View.OnClickListener {
-            if(brightNum > 0){
+            if(brightNum > 1){
                 brightNum--
-                binding.tvBrightnum.setText(brightNum.toString() + "")
+                binding.seekbarBrightness.progress = brightNum-1
+                binding.tvBrightnum.text = brightNum.toString()
             }
         })
 
