@@ -15,14 +15,15 @@
         android:background="@drawable/view_dlcs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="828dp"
             android:layout_height="290dp"
+            android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="26dp"
-            android:background="@drawable/view_bcl"
-            android:layout_gravity="bottom|center_horizontal">
+            android:background="@drawable/view_bcl">
 
             <ImageButton
                 android:id="@+id/btn_bright_down"
@@ -44,12 +45,12 @@
                 android:layout_marginTop="82dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
+                android:text="0"
                 android:textColor="#4c4c61"
                 android:textSize="32sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/btn_bright_down"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/btn_bright_up"
@@ -71,11 +72,11 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="30dp"
-                android:thumbOffset="1dp"
                 android:progress="0"
-                android:splitTrack="false"
                 android:progressDrawable="@drawable/seekbar_brightness"
+                android:splitTrack="false"
                 android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -91,6 +92,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:paddingBottom="10dp"
                 android:text="5300K"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toEndOf="@+id/btn_three"
                 app:layout_constraintTop_toBottomOf="@+id/btn_two" />
 
@@ -105,6 +107,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:paddingBottom="10dp"
                 android:text="4800K"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_one" />
 
@@ -119,6 +122,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:paddingBottom="10dp"
                 android:text="4300K"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toEndOf="@+id/btn_one"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -133,9 +137,10 @@
                 android:gravity="bottom|center_horizontal"
                 android:paddingBottom="10dp"
                 android:text="3500K"
+                android:stateListAnimator="@null"
                 app:layout_constraintStart_toEndOf="@+id/btn_bright_up"
                 app:layout_constraintTop_toTopOf="parent" />
-            
+
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,7 +152,7 @@
                 <ImageButton
                     android:id="@+id/ImageView03"
                     android:layout_width="224dp"
-                    android:layout_height="224dp"
+                    android:layout_height="230dp"
                     android:adjustViewBounds="true"
                     android:background="@color/white"
                     android:scaleType="fitCenter"
@@ -159,7 +164,7 @@
                     android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:background="yello"
+                    android:background="#FAFAFA"
                     android:scaleType="fitCenter"
                     android:src="@drawable/btn_field_2_2_active" />
 
@@ -169,11 +174,10 @@
                     android:layout_height="56dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:background="yello"
+                    android:background="@color/yellow"
                     android:scaleType="fitCenter"
                     android:src="@drawable/btn_field_1" />
             </FrameLayout>
->>>>>>> cdd962c41a25eeb7774a75c82725574f32aa2c28
 
 
 
@@ -339,7 +343,7 @@
                     android:layout_height="150dp"
                     android:layout_marginStart="40dp"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="68dp"
                     android:background="@drawable/view_dlcs"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/view_all" />
@@ -374,7 +378,6 @@
                     android:thumb="@drawable/switch_thumb"
                     android:track="@drawable/switch_selector"
                     app:layout_constraintEnd_toEndOf="@+id/view_depth"
-                    app:layout_constraintHorizontal_bias="0.573"
                     app:layout_constraintStart_toStartOf="@+id/view_depth"
                     app:layout_constraintTop_toBottomOf="@+id/tv_depth" />
 

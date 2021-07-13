@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnBrightUp.setOnClickListener(View.OnClickListener {
-            if(brightNum < 5){
+            if(brightNum < 4){
                 brightNum++
                 binding.tvBrightnum.setText(brightNum.toString() + "")
             }
@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
                 binding.tvSync.setTextColor(Color.parseColor("#cccccc"))
             }
         })
+
 
         setSeekBarMax(binding.seekbarBrightness,max)
 
