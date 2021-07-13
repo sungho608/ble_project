@@ -11,4 +11,5 @@
     <color name="btn_4300k">#FFC800</color>
     <color name="btn_4800k">#FAEB78</color>
     <color name="btn_5300k">#FAFAD2</color>
+    <color name="btn_border">#E0E0E0</color>
 </resources>
