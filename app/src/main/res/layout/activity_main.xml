@@ -29,7 +29,6 @@
             android:layout_marginTop="91dp"
             android:layout_width="251.2dp"
             android:layout_height="605.2dp"
-
             android:src="@drawable/ic_gp_light"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
