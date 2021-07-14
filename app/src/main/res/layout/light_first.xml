@@ -343,7 +343,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_sync" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_power_on"
         android:layout_width="312dp"
         android:layout_height="64dp"
         android:layout_gravity="bottom|center_horizontal"
@@ -368,6 +368,6 @@
         android:src="@drawable/gp_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_power_on" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
