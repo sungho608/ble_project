@@ -235,6 +235,7 @@
 
 
     <Switch
+        android:switchTextAppearance="@style/SwitchTextAppearance2"
         android:showText="true"
         android:textOn="ON"
         android:textOff="OFF"
@@ -282,6 +283,7 @@
 
 
     <Switch
+        android:switchTextAppearance="@style/SwitchTextAppearance2"
         android:showText="true"
         android:textOn="ON"
         android:textOff="OFF"
@@ -329,6 +331,7 @@
 
 
     <Switch
+        android:switchTextAppearance="@style/SwitchTextAppearance"
         android:showText="true"
         android:textOn="ON"
         android:textOff="OFF"

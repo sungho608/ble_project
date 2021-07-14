@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/clicked_color</item>
+    </style>
+
+    <style name="SwitchTextAppearance2" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/gary_select</item>
+    </style>
+</resources>
