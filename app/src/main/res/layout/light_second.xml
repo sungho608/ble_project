@@ -6,102 +6,137 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <View
-        android:id="@+id/view_all"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_all"
         android:layout_width="312dp"
         android:layout_height="64dp"
         android:background="@drawable/view_dlcs"
+        android:orientation="horizontal"
+        android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
+        <View
+            android:id="@+id/view_alloff"
+            android:layout_width="34dp"
+            android:layout_height="41.2dp"
+            android:layout_marginLeft="40dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/ic_on"
-        app:layout_constraintStart_toStartOf="@+id/view_all"
-        app:layout_constraintTop_toTopOf="@+id/view_all" />
+        <ImageView
+            android:id="@+id/iv_alloff"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_on"
+            app:layout_constraintStart_toStartOf="@+id/cl_all"
+            app:layout_constraintTop_toTopOf="@+id/cl_all" />
 
-    <TextView
-        android:id="@+id/tv_off"
-        android:layout_width="34dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="7dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center_horizontal"
-        android:textColor="#afafaf"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/view_all"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1"
-        android:text="All Off" />
+        <TextView
+            android:id="@+id/tv_off"
+            android:layout_width="34dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="All Off"
+            android:textColor="#afafaf"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/cl_all"
+            app:layout_constraintTop_toBottomOf="@+id/iv_alloff" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/ic_on"
-        app:layout_constraintStart_toEndOf="@+id/imageView1"
-        app:layout_constraintTop_toTopOf="@+id/view_all" />
+        <View
+            android:id="@+id/view_allendo"
+            android:layout_width="34dp"
+            android:layout_height="41.2dp"
+            android:layout_marginLeft="140dp"
+            android:onClick="click_allendo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_allecho"
-        android:layout_width="44dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginTop="7dp"
-        android:text="All Echo"
-        android:textColor="#afafaf"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_off"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <ImageView
+            android:id="@+id/iv_allendo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_on"
+            app:layout_constraintStart_toEndOf="@+id/iv_alloff"
+            app:layout_constraintTop_toTopOf="@+id/cl_all" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/ic_on"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/view_all" />
+        <TextView
+            android:id="@+id/tv_allendo"
+            android:layout_width="45dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="7dp"
+            android:text="All Endo"
+            android:textColor="#afafaf"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_off"
+            app:layout_constraintTop_toBottomOf="@+id/iv_allendo" />
 
-    <TextView
-        android:id="@+id/tv_allon"
-        android:layout_width="32dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginTop="7dp"
-        android:text="All On"
-        android:textColor="#afafaf"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_allecho"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        <View
+            android:id="@+id/view_allon"
+            android:layout_width="34dp"
+            android:layout_height="41.2dp"
+            android:layout_marginLeft="240dp"
+            android:onClick="click_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_allon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_on"
+            app:layout_constraintStart_toEndOf="@+id/iv_allendo"
+            app:layout_constraintTop_toTopOf="@+id/cl_all" />
+
+        <TextView
+            android:id="@+id/tv_allon"
+            android:layout_width="32dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginLeft="61dp"
+            android:layout_marginTop="7dp"
+            android:text="All On"
+            android:textColor="#afafaf"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_allendo"
+            app:layout_constraintTop_toBottomOf="@+id/iv_allon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <View
         android:id="@+id/view_depth"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/view_dlcs"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_all" />
+        app:layout_constraintTop_toBottomOf="@+id/cl_all"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_depth"
@@ -126,9 +161,7 @@
 
 
     <Switch
-        android:showText="true"
-        android:textOn="ON"
-        android:textOff="OFF"
+
         android:id="@+id/toggle_depth"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -139,16 +172,45 @@
         app:layout_constraintStart_toStartOf="@+id/view_depth"
         app:layout_constraintTop_toBottomOf="@+id/tv_depth" />
 
+    <TextView
+        android:id="@+id/depth_off"
+        android:visibility="visible"
+        android:layout_width="20dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:text="OFF"
+        android:textColor="#c9c9c9"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/toggle_depth"
+        app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+
+    <TextView
+        android:id="@+id/depth_on"
+        android:visibility="invisible"
+        android:layout_width="16dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="ON"
+        android:textColor="#ff8933"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_depth"
+        app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+
     <View
         android:id="@+id/view_lightning"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/view_dlcs"
         app:layout_constraintStart_toEndOf="@+id/view_depth"
-        app:layout_constraintTop_toBottomOf="@+id/view_all" />
+        app:layout_constraintTop_toBottomOf="@+id/cl_all"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_lightning"
@@ -190,8 +252,8 @@
         android:id="@+id/view_camera"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/view_dlcs"
         app:layout_constraintStart_toStartOf="parent"
@@ -281,23 +343,22 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_sync" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_power_on"
         android:layout_width="312dp"
         android:layout_height="64dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginTop="124dp"
         android:background="@drawable/btn_power_rounded"
         android:drawableLeft="@drawable/ic_power_on"
-        android:text="POWER ON"
-        android:textColor="@color/white"
+        android:elevation="0dp"
         android:paddingLeft="20dp"
         android:paddingRight="40dp"
+        android:text="POWER ON"
+        android:textColor="@color/white"
         android:textSize="22sp"
-        android:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_camera" />
-
 
     <ImageView
         android:layout_width="95.6dp"
@@ -306,6 +367,6 @@
         android:src="@drawable/gp_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_power_on" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
