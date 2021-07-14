@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="392dp"
-    android:layout_height="684dp">
+    android:layout_height="694dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_all"
-        android:layout_width="312dp"
-        android:layout_height="64dp"
-        android:background="@drawable/view_all"
+        android:layout_width="332dp"
+        android:layout_height="94dp"
+        android:background="@drawable/shadow_right_toggle"
         android:orientation="horizontal"
         android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,12 +128,12 @@
 
     <View
         android:id="@+id/view_depth"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/view_dlcs"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shadow_right_toggle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_all"
         tools:ignore="MissingConstraints" />
@@ -161,7 +161,6 @@
 
 
     <Switch
-
         android:id="@+id/toggle_depth"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
@@ -202,13 +201,13 @@
 
     <View
         android:id="@+id/view_lightning"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/view_dlcs"
-        app:layout_constraintStart_toEndOf="@+id/view_depth"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shadow_right_toggle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_all"
         tools:ignore="MissingConstraints" />
 
@@ -251,14 +250,14 @@
 
     <View
         android:id="@+id/view_camera"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/view_dlcs"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/shadow_right_toggle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_depth" />
+        app:layout_constraintTop_toBottomOf="@+id/cl_all" />
 
     <ImageView
         android:id="@+id/iv_camera"
@@ -299,14 +298,14 @@
 
     <View
         android:id="@+id/view_sync"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/view_dlcs"
-        app:layout_constraintStart_toEndOf="@+id/view_camera"
-        app:layout_constraintTop_toBottomOf="@+id/view_lightning" />
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/shadow_right_toggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_all" />
 
     <ImageView
         android:id="@+id/iv_sync"
@@ -345,12 +344,26 @@
         app:layout_constraintStart_toStartOf="@+id/view_sync"
         app:layout_constraintTop_toBottomOf="@+id/tv_sync" />
 
+    <TextView
+        android:id="@+id/sync_off"
+        android:layout_width="16dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="ON"
+        android:textColor="#ff8933"
+        android:textSize="10sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_sync"
+        app:layout_constraintTop_toTopOf="@+id/toggle_sync" />
+
     <Button
         android:id="@+id/btn_power_on"
         android:layout_width="312dp"
         android:layout_height="64dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="94dp"
         android:background="@drawable/btn_power_rounded"
         android:drawableLeft="@drawable/ic_power_on"
         android:elevation="0dp"
