@@ -10,7 +10,7 @@
         android:id="@+id/cl_all"
         android:layout_width="312dp"
         android:layout_height="64dp"
-        android:background="@drawable/view_dlcs"
+        android:background="@drawable/view_all"
         android:orientation="horizontal"
         android:weightSum="1"
         app:layout_constraintEnd_toEndOf="parent"
