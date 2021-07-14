@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFBDB8"
+    android:background="#e9e9e9"
     tools:context=".MainActivity">
 
 
@@ -45,7 +45,7 @@
             android:layout_height="290dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="26dp"
-            android:background="@drawable/view_bcl">
+            android:background="@drawable/shadow_left_view">
 
 
             <ImageButton
