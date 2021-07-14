@@ -206,33 +206,24 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
-                    android:id="@+id/ImageView03"
+                    android:id="@+id/iv_lightfield_1"
                     android:layout_width="224dp"
                     android:layout_height="230dp"
                     android:adjustViewBounds="true"
                     android:background="@color/white"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/btn_field_3" />
+                    android:src="@drawable/ic_btn_field_3" />
 
                 <ImageButton
-                    android:id="@+id/ImageView02"
+                    android:id="@+id/iv_lightfield_2"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:background="#FAFAFA"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/btn_field_2_2_active" />
+                    android:src="@drawable/ic_btn_field_2" />
 
-                <ImageButton
-                    android:id="@+id/ImageView01"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@color/yellow"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/btn_field_1" />
 
             </FrameLayout>
 
