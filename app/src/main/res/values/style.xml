@@ -5,6 +5,6 @@
     </style>
 
     <style name="SwitchTextAppearance2" parent="@android:style/TextAppearance.Holo.Small">
-        <item name="android:textColor">@color/gary_select</item>
+        <item name="android:textColor">@color/gray_select</item>
     </style>
 </resources>

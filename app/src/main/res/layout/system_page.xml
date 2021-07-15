@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:background="@drawable/ic_bg_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/view_dlcs"
+        android:layout_width="565dp"
+        android:layout_height="599dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_bg_title_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:text="시스템 구성 설정"
+            android:textColor="#5a67e7"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="282dp"
+            android:layout_height="282dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/system_right_bottom_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="90dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="126dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_horizontal"
+            android:text="무영등 개수"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_bright_down"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="35.2dp"
+            android:layout_marginTop="164dp"
+            android:background="@drawable/btn_brightness"
+            android:src="@drawable/ic_btn_arrow_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_brightnum"
+            android:layout_width="18dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="179dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="1"
+            android:textColor="#4c4c61"
+            android:textSize="32sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/btn_bright_down"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_bright_up"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="164dp"
+            android:background="@drawable/btn_brightness"
+            android:src="@drawable/ic_btn_arrow_right"
+            app:layout_constraintStart_toEndOf="@+id/tv_brightnum"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="282dp"
+            android:layout_height="282dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/system_left_bottom_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="90dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="126dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginRight="96dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_horizontal"
+            android:text="카메라 옵션"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/auto_illuminance"
+            android:layout_width="82dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="187dp"
+            android:layout_marginEnd="98dp"
+            android:layout_marginRight="98dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_selector"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/auto_illuminance_off"
+            android:layout_width="20dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:text="OFF"
+            android:textColor="#c9c9c9"
+            android:textSize="10sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/auto_illuminance"
+            app:layout_constraintTop_toTopOf="@+id/auto_illuminance" />
+
+        <TextView
+            android:id="@+id/auto_illuminance_on"
+            android:layout_width="16dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="ON"
+            android:textColor="#ff8933"
+            android:textSize="10sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/auto_illuminance"
+            app:layout_constraintTop_toTopOf="@+id/auto_illuminance" />
+
+        <TextView
+            android:layout_width="106dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="406dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_horizontal"
+            android:text="자동조도 설정"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+
+            android:id="@+id/toggle_depth"
+            android:layout_width="82dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="467dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/depth_off"
+            android:visibility="visible"
+            android:layout_width="20dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:text="OFF"
+            android:textColor="#c9c9c9"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/toggle_depth"
+            app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+
+        <TextView
+            android:id="@+id/depth_on"
+            android:visibility="invisible"
+            android:layout_width="16dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="ON"
+            android:textColor="#ff8933"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/toggle_depth"
+            app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/view_dlcs"
+        android:layout_width="565dp"
+        android:layout_height="599dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_bg_title_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:text="네트워크 및 기타 설정"
+            android:textColor="#5a67e7"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="565dp"
+            android:layout_height="148dp"
+            android:background="@drawable/system_bottom_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/network_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_btn_setting"
+            android:drawableRight="@drawable/ic_gp_arrow"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="-350dp"
+            android:paddingRight="16dp"
+            android:text="네트워크 설정"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/operatingRoom_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/ic_btn_setting"
+            android:drawableRight="@drawable/ic_gp_arrow"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="-350dp"
+            android:paddingRight="16dp"
+            android:text="수술실 명칭"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:layout_width="171dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp"
+            android:fontFamily="sans-serif"
+            android:text="을제병원 내과 수술실 A"
+            android:elevation="6dp"
+            android:textColor="#5a67e7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/operatingRoom_setting"
+            app:layout_constraintStart_toStartOf="@+id/operatingRoom_setting"
+            app:layout_constraintTop_toTopOf="@+id/operatingRoom_setting" />
+
+        <Button
+            android:id="@+id/user_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/ic_btn_setting"
+            android:drawableRight="@drawable/ic_gp_arrow"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="-350dp"
+            android:paddingRight="16dp"
+            android:text="사용자 설정"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/operatingRoom_setting" />
+
+        <Button
+            android:id="@+id/language_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/ic_btn_setting"
+            android:drawableRight="@drawable/ic_gp_arrow"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="-350dp"
+            android:paddingRight="16dp"
+            android:text="언어 설정"
+            android:textColor="#676a89"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

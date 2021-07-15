@@ -1,9 +1,9 @@
 package com.example.ble_project
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.SeekBar
@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.ble_project.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
     private var mBinding: ActivityMainBinding? = null
     private val binding get() = mBinding!!
 
@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ibSetting.setOnClickListener {
+            val intent = Intent(this, SystemPage::class.java)
+            startActivity(intent)
+        }
 
         setFrag(0)
 
