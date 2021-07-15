@@ -108,13 +108,14 @@
 
             <TextView
                 android:layout_width="70dp"
-                android:layout_height="17dp"
+                android:layout_height="18dp"
                 android:layout_marginLeft="114dp"
                 android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="Brightness" />
@@ -183,13 +184,14 @@
             <TextView
                 android:id="@+id/tv_color_tem"
                 android:layout_width="122dp"
-                android:layout_height="17dp"
+                android:layout_height="18dp"
                 android:layout_marginRight="172dp"
                 android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:textColor="#676a89"
                 android:textStyle="normal"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView"
                 android:text="Color Temperature" />
@@ -228,17 +230,19 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="67dp"
-                android:layout_height="17dp"
-                android:layout_marginRight="114dp"
+                android:layout_width="68.2dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="648dp"
+                android:layout_marginLeft="648dp"
                 android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
+                android:text="Light Field"
                 android:textColor="#676a89"
+                android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="Light Field" />
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
