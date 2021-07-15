@@ -205,26 +205,25 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
-                    android:id="@+id/iv_lightfield_1"
-                    android:layout_width="224dp"
-                    android:layout_height="230dp"
-                    android:adjustViewBounds="true"
-                    android:background="@color/white"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_btn_field_3" />
-
-                <ImageButton
-                    android:id="@+id/iv_lightfield_2"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                <Button
+                    android:id="@+id/btn_light_field3"
+                    android:layout_width="229dp"
+                    android:layout_height="229dp"
                     android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="#FAFAFA"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_btn_field_2" />
+                    android:background="@drawable/btn_light_field3" />
 
-
+                <Button
+                    android:id="@+id/btn_light_field2"
+                    android:layout_width="146dp"
+                    android:layout_height="146dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_light_field2" />
+                <Button
+                    android:id="@+id/btn_light_field1"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_light_field1" />
             </FrameLayout>
 
             <TextView

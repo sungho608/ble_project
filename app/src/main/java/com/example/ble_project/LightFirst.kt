@@ -20,14 +20,14 @@ class LightFirst : Fragment(){
         binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
                 binding.toggleDepth.setThumbResource(R.drawable.switch_thumb_orange)
-                binding.depthOn.visibility = View.VISIBLE
-                binding.depthOff.visibility = View.INVISIBLE
+                //binding.depthOn.visibility = View.VISIBLE
+                //binding.depthOff.visibility = View.INVISIBLE
                 binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
             } else {
                 binding.toggleDepth.setThumbResource(R.drawable.switch_thumb_white)
-                binding.depthOn.visibility = View.INVISIBLE
-                binding.depthOff.visibility = View.VISIBLE
+                //binding.depthOn.visibility = View.INVISIBLE
+                //binding.depthOff.visibility = View.VISIBLE
                 binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvDepth.setTextColor(Color.parseColor("#cccccc"))
             }

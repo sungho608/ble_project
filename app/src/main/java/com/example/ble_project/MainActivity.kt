@@ -129,6 +129,15 @@ class  MainActivity : AppCompatActivity() {
             onButtonClick(3)
         }
 
+        binding.btnLightField1.setOnClickListener {
+            binding.btnLightField1.isSelected = binding.btnLightField1.isSelected != true
+        }
+        binding.btnLightField2.setOnClickListener {
+            binding.btnLightField2.isSelected = binding.btnLightField2.isSelected != true
+        }
+        binding.btnLightField3.setOnClickListener {
+            binding.btnLightField3.isSelected = binding.btnLightField3.isSelected != true
+        }
 
     }
 
@@ -172,4 +181,5 @@ class  MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
