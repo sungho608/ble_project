@@ -23,6 +23,7 @@
             android:layout_width="34dp"
             android:layout_height="41.2dp"
             android:layout_marginLeft="40dp"
+
             android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
