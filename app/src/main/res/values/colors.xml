@@ -17,4 +17,5 @@
     <color name="clicked_color">#ff8933</color>
     <color name="gray_select">#c9c9c9</color>
     <color name="btn_gray">#fafafa</color>
+    <color name="system_gray">#f8f8fd</color>
 </resources>
