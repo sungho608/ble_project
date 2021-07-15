@@ -147,6 +147,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/ibtn_setting"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="right|top"
