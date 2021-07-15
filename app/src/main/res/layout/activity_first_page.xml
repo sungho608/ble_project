@@ -66,9 +66,10 @@
         <Button
             android:id="@+id/btn_select_product"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="433.2dp"
-            android:layout_height="64dp"
-            android:background="@drawable/btn_product_pressed"
+            android:layout_width="453.2dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="89dp"
+            android:background="@drawable/shadow_right_toggle"
             android:drawableLeft="@drawable/ic_gp_select_product"
             android:fontFamily="sans-serif"
             android:gravity="right|center_vertical"
@@ -78,7 +79,7 @@
             android:textColor="#000000"
             android:textSize="24dp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/view_select_product"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/view_select_product"
             app:layout_constraintStart_toStartOf="@+id/view_select_product" />
 
@@ -86,6 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="67.2dp"
+            android:layout_marginTop="10dp"
             android:text="1"
             android:textColor="#5A67E7"
             android:textSize="24sp"
@@ -170,9 +172,10 @@
         <Button
             android:id="@+id/btn_select_product2"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="433.2dp"
-            android:layout_height="64dp"
-            android:background="@drawable/btn_product_pressed"
+            android:layout_width="452.2dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="89dp"
+            android:background="@drawable/shadow_right_toggle"
             android:drawableLeft="@drawable/ic_gp_select_product"
             android:fontFamily="sans-serif"
             android:gravity="right|center_vertical"
@@ -182,7 +185,7 @@
             android:textColor="#000000"
             android:textSize="24dp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/view_select_product2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/view_select_product2"
             app:layout_constraintStart_toStartOf="@+id/view_select_product2" />
 
@@ -190,6 +193,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="67.2dp"
+            android:layout_marginTop="10dp"
             android:text="2"
             android:textColor="#5A67E7"
             android:textSize="24sp"

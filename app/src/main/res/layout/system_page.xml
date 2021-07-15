@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/gray_select"
+    android:background="@color/system_gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -73,7 +73,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_bright_down"
+            android:id="@+id/light_count_down"
             android:layout_width="68dp"
             android:layout_height="68dp"
             android:layout_marginLeft="35.2dp"
@@ -84,7 +84,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_brightnum"
+            android:id="@+id/tv_light_count"
             android:layout_width="18dp"
             android:layout_height="38dp"
             android:layout_marginStart="34dp"
@@ -96,11 +96,11 @@
             android:textColor="#4c4c61"
             android:textSize="32sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toEndOf="@+id/btn_bright_down"
+            app:layout_constraintStart_toEndOf="@+id/light_count_down"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_bright_up"
+            android:id="@+id/light_count_up"
             android:layout_width="68dp"
             android:layout_height="68dp"
             android:layout_marginStart="34dp"
@@ -108,7 +108,7 @@
             android:layout_marginTop="164dp"
             android:background="@drawable/btn_brightness"
             android:src="@drawable/ic_btn_arrow_right"
-            app:layout_constraintStart_toEndOf="@+id/tv_brightnum"
+            app:layout_constraintStart_toEndOf="@+id/tv_light_count"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
@@ -139,7 +139,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
-            android:id="@+id/auto_illuminance"
+            android:id="@+id/toggle_camera"
             android:layout_width="82dp"
             android:layout_height="22dp"
             android:layout_marginTop="187dp"
@@ -151,7 +151,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/auto_illuminance_off"
+            android:id="@+id/tv_camera_off"
             android:layout_width="20dp"
             android:layout_height="13dp"
             android:layout_marginStart="10dp"
@@ -161,11 +161,11 @@
             android:textColor="#c9c9c9"
             android:textSize="10sp"
             android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/auto_illuminance"
-            app:layout_constraintTop_toTopOf="@+id/auto_illuminance" />
+            app:layout_constraintStart_toStartOf="@+id/toggle_camera"
+            app:layout_constraintTop_toTopOf="@+id/toggle_camera" />
 
         <TextView
-            android:id="@+id/auto_illuminance_on"
+            android:id="@+id/tv_camera_on"
             android:layout_width="16dp"
             android:layout_height="13dp"
             android:layout_marginTop="4dp"
@@ -175,8 +175,8 @@
             android:textColor="#ff8933"
             android:textSize="10sp"
             android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="@+id/auto_illuminance"
-            app:layout_constraintTop_toTopOf="@+id/auto_illuminance" />
+            app:layout_constraintEnd_toEndOf="@+id/toggle_camera"
+            app:layout_constraintTop_toTopOf="@+id/toggle_camera" />
 
         <TextView
             android:layout_width="106dp"
@@ -193,8 +193,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
-
-            android:id="@+id/toggle_depth"
+            android:id="@+id/toggle_auto_illuminance"
             android:layout_width="82dp"
             android:layout_height="22dp"
             android:layout_marginTop="467dp"
@@ -205,8 +204,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
-            android:id="@+id/depth_off"
-            android:visibility="visible"
+            android:id="@+id/tv_auto_illuminance_off"
             android:layout_width="20dp"
             android:layout_height="13dp"
             android:layout_marginStart="10dp"
@@ -215,12 +213,13 @@
             android:text="OFF"
             android:textColor="#c9c9c9"
             android:textSize="10sp"
-            app:layout_constraintStart_toStartOf="@+id/toggle_depth"
-            app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/toggle_auto_illuminance"
+            app:layout_constraintTop_toTopOf="@+id/toggle_auto_illuminance" />
+
 
         <TextView
-            android:id="@+id/depth_on"
-            android:visibility="invisible"
+            android:id="@+id/tv_auto_illuminance_on"
             android:layout_width="16dp"
             android:layout_height="13dp"
             android:layout_marginTop="4dp"
@@ -229,8 +228,10 @@
             android:text="ON"
             android:textColor="#ff8933"
             android:textSize="10sp"
-            app:layout_constraintEnd_toEndOf="@+id/toggle_depth"
-            app:layout_constraintTop_toTopOf="@+id/toggle_depth" />
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/toggle_auto_illuminance"
+            app:layout_constraintTop_toTopOf="@+id/toggle_auto_illuminance" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -363,5 +364,14 @@
             app:layout_constraintTop_toBottomOf="@+id/user_setting" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="95.2dp"
+        android:layout_height="19.2dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/gp_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
