@@ -42,9 +42,11 @@ class SystemPage : AppCompatActivity(){
 
         binding.toggleCamera.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleCamera.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.tvCameraOn.visibility = View.VISIBLE
                 binding.tvCameraOff.visibility = View.INVISIBLE
             } else {
+                binding.toggleCamera.setThumbResource(R.drawable.switch_thumb_white)
                 binding.tvCameraOn.visibility = View.INVISIBLE
                 binding.tvCameraOff.visibility = View.VISIBLE
             }
@@ -52,9 +54,11 @@ class SystemPage : AppCompatActivity(){
 
         binding.toggleAutoIlluminance.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleAutoIlluminance.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.tvAutoIlluminanceOn.visibility = View.VISIBLE
                 binding.tvAutoIlluminanceOff.visibility = View.INVISIBLE
             } else {
+                binding.toggleAutoIlluminance.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.tvAutoIlluminanceOn.visibility = View.INVISIBLE
                 binding.tvAutoIlluminanceOff.visibility = View.VISIBLE
             }
