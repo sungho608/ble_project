@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.SeekBar
@@ -22,6 +23,7 @@ class  MainActivity : AppCompatActivity() {
     val min : Int = 1
     val step : Int = 1
     private var brightNum: Int = 1
+    private var lightNum = 0
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +45,13 @@ class  MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        setFrag(0)
+        if(intent.hasExtra("firstFrag")){
+            lightNum = intent.getIntExtra("firstFrag",0)
+        }else if(intent.hasExtra("secondFrag")){
+            lightNum = intent.getIntExtra("secondFrag",1)
+        }
+
+        setFrag(lightNum)
 
         binding.seekbarBrightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
