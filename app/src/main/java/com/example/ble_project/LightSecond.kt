@@ -19,11 +19,13 @@ class LightSecond : Fragment(){
 
         binding.toggleDepth.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleDepth.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.depthOn.visibility = View.VISIBLE
                 binding.depthOff.visibility = View.INVISIBLE
                 binding.ivDepth.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvDepth.setTextColor(Color.parseColor("#0066ff"))
             } else {
+                binding.toggleDepth.setThumbResource(R.drawable.switch_thumb_white)
                 binding.depthOn.visibility = View.INVISIBLE
                 binding.depthOff.visibility = View.VISIBLE
                 binding.ivDepth.setColorFilter(Color.parseColor("#cccccc"))
@@ -33,9 +35,11 @@ class LightSecond : Fragment(){
 
         binding.toggleLightning.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleLightning.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.ivLightning.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvLightning.setTextColor(Color.parseColor("#0066ff"))
             } else {
+                binding.toggleLightning.setThumbResource(R.drawable.switch_thumb_white)
                 binding.ivLightning.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvLightning.setTextColor(Color.parseColor("#cccccc"))
             }
@@ -43,9 +47,11 @@ class LightSecond : Fragment(){
 
         binding.toggleCamera.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleCamera.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.ivCamera.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvCamera.setTextColor(Color.parseColor("#0066ff"))
             } else {
+                binding.toggleCamera.setThumbResource(R.drawable.switch_thumb_white)
                 binding.ivCamera.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvCamera.setTextColor(Color.parseColor("#cccccc"))
             }
@@ -53,9 +59,11 @@ class LightSecond : Fragment(){
 
         binding.toggleSync.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, _ ->
             if(buttonView.isChecked){
+                binding.toggleSync.setThumbResource(R.drawable.switch_thumb_orange)
                 binding.ivSync.setColorFilter(Color.parseColor("#0066ff"))
                 binding.tvSync.setTextColor(Color.parseColor("#0066ff"))
             } else {
+                binding.toggleSync.setThumbResource(R.drawable.switch_thumb_white)
                 binding.ivSync.setColorFilter(Color.parseColor("#cccccc"))
                 binding.tvSync.setTextColor(Color.parseColor("#cccccc"))
             }

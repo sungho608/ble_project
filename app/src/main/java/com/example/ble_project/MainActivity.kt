@@ -1,5 +1,6 @@
 package com.example.ble_project
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -14,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.ble_project.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
     private var mBinding: ActivityMainBinding? = null
     private val binding get() = mBinding!!
 
@@ -22,17 +23,35 @@ class MainActivity : AppCompatActivity() {
     val min : Int = 1
     val step : Int = 1
     private var brightNum: Int = 1
+    private var lightNum = 0
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setFrag(0)
+        var decorView = window.decorView
+        var uiOption = window.decorView.systemUiVisibility
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) uiOption = uiOption or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) uiOption = uiOption or View.SYSTEM_UI_FLAG_FULLSCREEN
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) uiOption = uiOption or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
+        decorView.setSystemUiVisibility(uiOption)
+
+        binding.ibSetting.setOnClickListener {
+            val intent = Intent(this, SystemPage::class.java)
+            startActivity(intent)
+        }
+
+        if(intent.hasExtra("firstFrag")){
+            lightNum = intent.getIntExtra("firstFrag",0)
+        }else if(intent.hasExtra("secondFrag")){
+            lightNum = intent.getIntExtra("secondFrag",1)
+        }
+
+        setFrag(lightNum)
 
         binding.seekbarBrightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
@@ -110,6 +129,15 @@ class MainActivity : AppCompatActivity() {
             onButtonClick(3)
         }
 
+        binding.btnLightField1.setOnClickListener {
+            binding.btnLightField1.isSelected = binding.btnLightField1.isSelected != true
+        }
+        binding.btnLightField2.setOnClickListener {
+            binding.btnLightField2.isSelected = binding.btnLightField2.isSelected != true
+        }
+        binding.btnLightField3.setOnClickListener {
+            binding.btnLightField3.isSelected = binding.btnLightField3.isSelected != true
+        }
 
     }
 
@@ -153,4 +181,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e9e9e9"
+    android:background="@color/backgroud_color"
     tools:context=".MainActivity">
 
 
@@ -22,7 +22,7 @@
             android:id="@+id/ib_setting"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_btn_setting"
+            android:background="@drawable/ic_btn_setting"
             android:layout_gravity="right|top"
             android:layout_marginTop="40dp"
             android:layout_marginRight="44dp"/>
@@ -117,7 +117,7 @@
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Brightness" />
+                android:text="Brightness" />
 
             <Button
                 android:id="@+id/btn_four"
@@ -181,7 +181,7 @@
 
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tv_color_tem"
                 android:layout_width="122dp"
                 android:layout_height="17dp"
                 android:layout_marginRight="172dp"
@@ -192,7 +192,7 @@
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView"
-                tools:text="Color Temperature" />
+                android:text="Color Temperature" />
 
 
             <FrameLayout
@@ -207,21 +207,21 @@
 
                 <Button
                     android:id="@+id/btn_light_field3"
-                    android:layout_width="227dp"
-                    android:layout_height="227dp"
+                    android:layout_width="229dp"
+                    android:layout_height="229dp"
                     android:layout_gravity="center"
                     android:background="@drawable/btn_light_field3" />
 
                 <Button
                     android:id="@+id/btn_light_field2"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="146dp"
+                    android:layout_height="146dp"
                     android:layout_gravity="center"
                     android:background="@drawable/btn_light_field2" />
                 <Button
                     android:id="@+id/btn_light_field1"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
                     android:layout_gravity="center"
                     android:background="@drawable/btn_light_field1" />
             </FrameLayout>
@@ -238,7 +238,7 @@
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="Light Field" />
+                android:text="Light Field" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

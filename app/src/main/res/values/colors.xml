@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backgroud_color">#E9E9E9</color>
     <color name="btn_3500k">#FFB800</color>
     <color name="btn_4300k">#FFCB44</color>
     <color name="btn_4800k">#FFE5A0</color>
@@ -14,6 +15,7 @@
     <color name="btn_border">#E0E0E0</color>
     <color name="yellow">#FFCB44</color>
     <color name="clicked_color">#ff8933</color>
-    <color name="gary_select">#c9c9c9</color>
+    <color name="gray_select">#c9c9c9</color>
     <color name="btn_gray">#fafafa</color>
+    <color name="system_gray">#f8f8fd</color>
 </resources>

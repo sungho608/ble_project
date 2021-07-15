@@ -10,11 +10,11 @@
                 android:color="#e0e0e0"/>
         </shape>
     </item>
-    <item android:state_checked="true">
+    <item android:state_selected="true">
         <shape android:shape="ring"
             android:useLevel="false"
-            android:innerRadius="8dp"
-            android:thickness="22dp">
+            android:innerRadius="74dp"
+            android:thickness="38dp">
             <solid android:color="#ffcb44"/>
             <stroke android:width="2dp"
                 android:color="#e0e0e0"/>
