@@ -58,7 +58,7 @@ class SystemPage : AppCompatActivity(){
                 binding.tvAutoIlluminanceOn.visibility = View.VISIBLE
                 binding.tvAutoIlluminanceOff.visibility = View.INVISIBLE
             } else {
-                binding.toggleAutoIlluminance.setThumbResource(R.drawable.switch_thumb_orange)
+                binding.toggleAutoIlluminance.setThumbResource(R.drawable.switch_thumb_white)
                 binding.tvAutoIlluminanceOn.visibility = View.INVISIBLE
                 binding.tvAutoIlluminanceOff.visibility = View.VISIBLE
             }
